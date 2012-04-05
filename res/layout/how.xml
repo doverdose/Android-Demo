@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="7dp"
+    >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收据王如何使用
+消费后，将您的收据拍照上传, 您将会得到购买八至九折优惠券的优惠。
+
+简易操作
+将您手机上的优惠券给商家看商家便会给予折扣。
+
+分享奖励
+若您与您的朋友分享您的优惠, 您的优惠将倍增。
+
+如果商家尚未加入收据王?
+没有问题。收据王可以很容易地告诉商家他们应该加入。 如果您是帮入商家加入收据王的前10人之一, 您将获得终身的优惠券。"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20dp" />
+
+    <TextView  
+	android:id="@+id/item_subtitle"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:padding="2dp"
+    android:textSize="13dp" />
+</LinearLayout>

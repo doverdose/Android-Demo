@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TODO List</string>
+    <string name="add_a_task.en">Add a task</string>
+    <string name="all_the_tasks.en">The the tasks</string>
+    <string name="show_task.en">Show task</string>
+    <string name="edit_task.en">Edit task</string>
+    <string name="view_allthe_tasks.en">View all the tasks</string>
+    <string name="return_to_the_homepage.en">Return to the homepage</string>
+    <string name="delete_this_task.en">Delete this task</string>
+    <string name="title_title.en">Title</string>
+    <string name="description_title.en">Description: </string>
+</resources>
