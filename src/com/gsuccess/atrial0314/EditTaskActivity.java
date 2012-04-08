@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 /**
  *
- * @author dinduks
+ * @author Eric
  */
 public class EditTaskActivity extends Activity {
 

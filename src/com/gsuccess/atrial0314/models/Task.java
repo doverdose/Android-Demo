@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  *
- * @author dinduks
+ * @author Eric
  */
 public class Task {
 

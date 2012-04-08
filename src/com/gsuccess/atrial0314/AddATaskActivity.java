@@ -15,7 +15,7 @@ import android.widget.EditText;
 
 /**
  *
- * @author dinduks
+ * @author Eric
  */
 public class AddATaskActivity extends Activity {
 
@@ -29,9 +29,18 @@ public class AddATaskActivity extends Activity {
             public void onClick(View view) {
                 final EditText taskTitle = (EditText) findViewById(R.id.taskTitle);
                 final EditText taskDescription = (EditText) findViewById(R.id.taskDescription);
-
-                saveTask(taskTitle.getText().toString(), taskDescription.getText().toString());
-
+                final EditText taskfrequency = (EditText) findViewById(R.id.editText1);
+                String taskday="0";
+                System.out.println(taskfrequency.getText().toString());
+                if(taskfrequency.getText().toString().equals("daily")==true){
+                	for(int i=0;i<7;i++){
+                		taskday=String.valueOf(i);
+                        saveTask(taskTitle.getText().toString(), taskDescription.getText().toString(),taskday,taskfrequency.getText().toString());
+                	}
+                }
+                else{
+                    saveTask(taskTitle.getText().toString(), taskDescription.getText().toString(),taskday,taskfrequency.getText().toString());
+                }
                 buildSuccessDialog().show();
             }
         });
@@ -45,11 +54,13 @@ public class AddATaskActivity extends Activity {
         });
     }
 
-    private void saveTask(String title, String description) {
+    private void saveTask(String title, String description, String day, String frequency) {
         SQLiteOpenHelper database = new TaskOpenHelper(this);
         ContentValues values = new ContentValues();
         values.put("title", title);
         values.put("description", description);
+        values.put("day", day);
+        values.put("frequency", frequency);
         try {
             database.getWritableDatabase().insert(TaskOpenHelper.TASK_TABLE_NAME, "", values);
         } catch (SQLiteException e) {
@@ -65,7 +76,7 @@ public class AddATaskActivity extends Activity {
                .setNeutralButton("Go back to the homepage", new DialogInterface.OnClickListener() {
                    @Override
                    public void onClick(DialogInterface dialogInterface, int i) {
-                       Intent intent = new Intent(AddATaskActivity.this, HomepageActivity.class);
+                       Intent intent = new Intent(AddATaskActivity.this, welcome.class);
                        startActivity(intent);
                    }
                });

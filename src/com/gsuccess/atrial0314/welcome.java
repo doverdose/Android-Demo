@@ -17,13 +17,13 @@ public class welcome extends TabActivity {
 
         intent = new Intent().setClass(this, HomepageActivity.class);
         spec = tabHost  .newTabSpec("some_things")
-                        .setIndicator("主页")
+                        .setIndicator("Schedule View")
                         .setContent(intent);
         tabHost.addTab(spec);
         
-        intent = new Intent().setClass(this, how.class);
+        intent = new Intent().setClass(this, ScheduleActivity.class);
         spec = tabHost  .newTabSpec("some_things")
-                        .setIndicator("如何使用")
+                        .setIndicator("Medication View")
                         .setContent(intent);
         tabHost.addTab(spec);
         

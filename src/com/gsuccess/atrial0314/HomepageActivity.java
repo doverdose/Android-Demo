@@ -12,7 +12,7 @@ import android.view.View;
 
 /**
  *
- * @author dinduks
+ * @author Eric
  */
 public class HomepageActivity extends Activity {
 
@@ -20,7 +20,7 @@ public class HomepageActivity extends Activity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.homepage);
-
+        
         final Button addATaskButton = (Button)findViewById(R.id.addATaskButton);
         addATaskButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -38,8 +38,8 @@ public class HomepageActivity extends Activity {
         });
         SQLiteOpenHelper database = new TaskOpenHelper(this);
         ContentValues values = new ContentValues();
-        values.put("title", "lala");
-        values.put("description", "baba");
+       // values.put("title", "lala");
+       // values.put("description", "baba");
         try {
             database.getWritableDatabase().insert(TaskOpenHelper.TASK_TABLE_NAME, "", values);
         } catch (SQLiteException e) {

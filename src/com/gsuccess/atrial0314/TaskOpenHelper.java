@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  *
- * @author dinduks
+ * @author Eric
  */
 public class TaskOpenHelper extends SQLiteOpenHelper {
 
@@ -15,11 +15,17 @@ public class TaskOpenHelper extends SQLiteOpenHelper {
     public static final String TASK_TABLE_NAME = "task";
     public static final String TITLE_COLUMN = "title";
     public static final String DESCRIPTION_COLUMN = "description";
+    public static final String DAY_COLUMN = "day";
+    public static final String FREQUENCY_COLUMN = "frequency";
+    public static final String CATEGORY_COLUMN = "category";
     private static final String TASK_TABLE_CREATE =
             "CREATE TABLE " + TASK_TABLE_NAME + " (" +
             "_id INTEGER PRIMARY KEY," +
             TITLE_COLUMN + " VARCHAR(255)," +
-            DESCRIPTION_COLUMN + " TEXT);";
+            DESCRIPTION_COLUMN + " TEXT," +
+            DAY_COLUMN + " VARCHAR(255)," +
+            FREQUENCY_COLUMN + " VARCHAR(255)," +
+            CATEGORY_COLUMN+ " VARCHAR(255));";
 
     TaskOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
